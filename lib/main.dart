@@ -49,7 +49,7 @@ class MyHomePage extends StatelessWidget {
           child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text('Now Playing')
+            Text('Now Playing1')
           ]
           )
           
