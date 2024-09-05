@@ -26,33 +26,27 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pronify'),
-        backgroundColor: Colors.black,
-      ),
-      body: const Center(
-        child: Text(
-          'Hello, world!',
-          style: TextStyle(color: Colors.white, fontSize: 24),
+        appBar: AppBar(
+          title: const Text('Pronify'),
+          backgroundColor: Colors.black,
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+        body: const Center(
+          child: Text(
+            'Hello, world!',
+            style: TextStyle(color: Colors.white, fontSize: 24),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
-        backgroundColor: Colors.grey.shade900,
-      ),
-    );
+        ),
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(color: Colors.grey[800]),
+          child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(onPressed: (){}, icon: const Icon(Icons.home)),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.settings))
+          ]
+          )
+          
+        ));
   }
 }
